@@ -1,0 +1,21 @@
+# Unity generated folders
+DUAN1/[Ll]ibrary/
+DUAN1/[Tt]emp/
+DUAN1/[Oo]bj/
+DUAN1/[Bb]uild/
+DUAN1/[Bb]uilds/
+DUAN1/[Ll]ogs/
+DUAN1/[Mm]emoryCaptures/
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Unity cache
+DUAN1/UserSettings/
