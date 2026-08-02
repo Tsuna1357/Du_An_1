@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00b2c02833727eb408e5b7aa8e1fa1bc
+guid: 730a8cf5c8898f24a94737e9c5c95da8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,35 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "l\xF4ng + b\xE1nh_0"
+      name: statue_crying_0
       rect:
         serializedVersion: 2
-        x: 245
-        y: 452
-        width: 417
-        height: 417
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2119b9a413dac1f459b0254e10a27cc5
-      internalID: -7743357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "l\xF4ng + b\xE1nh_1"
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 61
-        width: 392
-        height: 368
+        x: 0
+        y: 0
+        width: 1024
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc2dbcf273572c438579cc50110f222
-      internalID: 912079573
+      spriteID: 07d896fd2c5f4bb4f8be77cb57227371
+      internalID: -826837644
       vertices: []
       indices: 
       edges: []
@@ -144,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9b4056a8cb8b00345bf00380272840c3
+    spriteID: 4a933300a1d6c524797f4d50c1d1e407
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "l\xF4ng + b\xE1nh_0": -7743357
-      "l\xF4ng + b\xE1nh_1": 912079573
+      statue_crying_0: -826837644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

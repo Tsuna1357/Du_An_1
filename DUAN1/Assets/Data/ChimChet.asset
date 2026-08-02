@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 4
   itemName: ChimChet
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -610620745, guid: d24eaf4e83e49344fbfaae08c4f65d9a, type: 3}
   consumable: 0

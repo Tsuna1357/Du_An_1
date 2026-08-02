@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 5
   itemName: HopBanh
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -1175835173, guid: 90eca953ea51c6e4595cf7765ca23e38, type: 3}
   consumable: 0
