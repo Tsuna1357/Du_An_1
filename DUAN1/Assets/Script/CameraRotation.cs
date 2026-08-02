@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-public class Camera : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
     public GameObject upButton;
     public GameObject downButton;
