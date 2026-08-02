@@ -1246,6 +1246,7 @@ MonoBehaviour:
   rotateSpeed: 8
   ceilingAngle: -80
   isFocus: 0
+  currentPopup: {fileID: 0}
 --- !u!1 &364268863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,59 +1360,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1073579907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &406077967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 406077968}
-  - component: {fileID: 406077969}
-  m_Layer: 0
-  m_Name: BoxColider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &406077968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406077967}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.424, y: -0.672, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1843959264}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &406077969
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406077967}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &429796682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2108,60 @@ Transform:
   - {fileID: 2003011875}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &764498703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764498704}
+  - component: {fileID: 764498705}
+  m_Layer: 0
+  m_Name: Puzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764498704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764498703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997195446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764498705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764498703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3b9d6b737f7ff4ea06234b9237e29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
+  items:
+  - {fileID: 11400000, guid: 03063dbb908d4914ba600fe3904e2919, type: 2}
+  - {fileID: 11400000, guid: df3e5fd6911667c438abeea985868eb1, type: 2}
+  - {fileID: 11400000, guid: b72b7585723027f48a3f2b0acf338451, type: 2}
+  - {fileID: 11400000, guid: 72c2524b5d9c76149a550f828541e3f5, type: 2}
+  - {fileID: 11400000, guid: 0b75ef538cd360744a2c0d76e2db2c1b, type: 2}
+  - {fileID: 11400000, guid: 1bcb4f3b49901644e80e443605ebeb2c, type: 2}
+  - {fileID: 11400000, guid: dc9b211e1964bfe44a9893eb21cc3237, type: 2}
+  - {fileID: 11400000, guid: a164891cf66999a4f968a38eb14643c8, type: 2}
+  - {fileID: 11400000, guid: a755e855cc5de0a46a1c98b7ae1890b0, type: 2}
 --- !u!1 &818657842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,6 +2538,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1073579907}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &997195445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997195446}
+  m_Layer: 0
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &997195446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997195445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17268, y: -1.5326, z: 6.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 764498704}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000860713
 GameObject:
   m_ObjectHideFlags: 0
@@ -9492,6 +9526,8 @@ GameObject:
   - component: {fileID: 1843959264}
   - component: {fileID: 1843959263}
   - component: {fileID: 1843959265}
+  - component: {fileID: 1843959267}
+  - component: {fileID: 1843959266}
   m_Layer: 0
   m_Name: teddy1_0
   m_TagString: Untagged
@@ -9570,8 +9606,7 @@ Transform:
   m_LocalPosition: {x: 1.7020003, y: 0.63100004, z: -0.066999674}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 406077968}
+  m_Children: []
   m_Father: {fileID: 1394022608}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1843959265
@@ -9596,6 +9631,84 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1843959266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843959262}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9099619, y: 2.4377742, z: 0.5323285}
+  m_Center: {x: 0.49371326, y: -0.8892939, z: -0.16616517}
+--- !u!114 &1843959267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843959262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8f2e1f56d5b7b4182f405219b92780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleBase
+  cameraMap: {fileID: 340412747}
+  states:
+  - autoNext: 1
+    stateID: 0
+    requireItemID: 0
+    consumeItem: 0
+    nextState: 1
+    actions:
+    - action: 4
+      targetObject: {fileID: 1843959262}
+      animator: {fileID: 1843959265}
+      boolName: 
+      boolValue: 0
+      intName: teddy_state
+      intValue: 1
+      addItemID: 0
+      removeItemID: 0
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
+  - autoNext: 1
+    stateID: 1
+    requireItemID: -1
+    consumeItem: 0
+    nextState: 2
+    actions:
+    - action: 7
+      targetObject: {fileID: 1843959262}
+      animator: {fileID: 1843959265}
+      boolName: 
+      boolValue: 0
+      intName: teddy_state
+      intValue: 2
+      addItemID: 2
+      removeItemID: 0
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
+  - autoNext: 1
+    stateID: 2
+    requireItemID: -1
+    consumeItem: 0
+    nextState: 2
+    actions: []
+  currentState: 0
 --- !u!1 &1875549444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10672,3 +10785,4 @@ SceneRoots:
   - {fileID: 1304102476}
   - {fileID: 548677810}
   - {fileID: 597030925}
+  - {fileID: 997195446}
