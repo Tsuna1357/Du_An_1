@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00b2c02833727eb408e5b7aa8e1fa1bc
+guid: 8d3bfbd70d0e9254f82c3da598fc7e4f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,35 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "l\xF4ng + b\xE1nh_0"
+      name: Box_of_coooooookkkkkk_0
       rect:
         serializedVersion: 2
-        x: 245
-        y: 452
-        width: 417
-        height: 417
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2119b9a413dac1f459b0254e10a27cc5
-      internalID: -7743357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "l\xF4ng + b\xE1nh_1"
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 61
-        width: 392
-        height: 368
+        x: 782
+        y: 155
+        width: 225
+        height: 724
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc2dbcf273572c438579cc50110f222
-      internalID: 912079573
+      spriteID: c8c1b2b11e279c5418cc72111dfa17f1
+      internalID: -744632791
       vertices: []
       indices: 
       edges: []
@@ -144,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9b4056a8cb8b00345bf00380272840c3
+    spriteID: 5dc0ab25093f2624ca02daf149cd0200
     internalID: 0
     vertices: []
     indices: 
@@ -154,8 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "l\xF4ng + b\xE1nh_0": -7743357
-      "l\xF4ng + b\xE1nh_1": 912079573
+      Box_of_coooooookkkkkk_0: -744632791
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
