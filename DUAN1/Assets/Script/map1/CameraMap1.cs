@@ -23,7 +23,7 @@ public class CameraMap1 : MonoBehaviour
     bool lookingCeiling;
     bool isChanging;
     public bool isFocus;
-
+    public GameObject currentPopup;
     Quaternion targetRotation;
 
     private Vector3 originalPosition;
@@ -204,5 +204,40 @@ public class CameraMap1 : MonoBehaviour
             fadePanel.SetActive(false);
 
         isChanging = false;
+    }
+    public void OpenPopup(GameObject popup)
+    {
+        if (popup == null)
+            return;
+
+        currentPopup = popup;
+
+        popup.SetActive(true);
+
+        leftButton.gameObject.SetActive(false);
+        rightButton.gameObject.SetActive(false);
+        upButton.gameObject.SetActive(false);
+
+        downButton.gameObject.SetActive(true);
+
+        downButton.onClick.RemoveAllListeners();
+        downButton.onClick.AddListener(ClosePopup);
+    }
+    public void ClosePopup()
+    {
+        if (currentPopup != null)
+        {
+            currentPopup.SetActive(false);
+            currentPopup = null;
+        }
+
+        leftButton.gameObject.SetActive(false);
+        rightButton.gameObject.SetActive(false);
+        upButton.gameObject.SetActive(false);
+
+        downButton.gameObject.SetActive(true);
+
+        downButton.onClick.RemoveAllListeners();
+        downButton.onClick.AddListener(Back);
     }
 }

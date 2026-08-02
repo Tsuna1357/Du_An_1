@@ -15,6 +15,8 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public int selectedSlot = -1;
 
+    //------------------------------------------------
+
     void Awake()
     {
         if (Instance == null)
@@ -22,6 +24,8 @@ public class InventoryManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
+
+    //------------------------------------------------
 
     void Start()
     {
@@ -34,7 +38,9 @@ public class InventoryManager : MonoBehaviour
         RefreshInventory();
     }
 
-    //=================================================
+    //------------------------------------------------
+    // ADD ITEM
+    //------------------------------------------------
 
     public bool AddItem(ItemData item)
     {
@@ -50,12 +56,14 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Inventory đầy!");
+        Debug.Log("Inventory đầy");
 
         return false;
     }
 
-    //=================================================
+    //------------------------------------------------
+    // REMOVE
+    //------------------------------------------------
 
     public void RemoveItem(int index)
     {
@@ -77,7 +85,51 @@ public class InventoryManager : MonoBehaviour
         RemoveItem(selectedSlot);
     }
 
-    //=================================================
+    //========== PART 3 ==========
+
+    public bool RemoveItemByID(int id)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == null)
+                continue;
+
+            if (inventory[i].itemID == id)
+            {
+                RemoveItem(i);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    //------------------------------------------------
+    // REPLACE ITEM
+    //------------------------------------------------
+
+    public bool ReplaceItem(int oldID, ItemData newItem)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == null)
+                continue;
+
+            if (inventory[i].itemID == oldID)
+            {
+                inventory[i] = newItem;
+
+                RefreshInventory();
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    //------------------------------------------------
 
     void CompressInventory()
     {
@@ -97,7 +149,7 @@ public class InventoryManager : MonoBehaviour
         inventory = temp;
     }
 
-    //=================================================
+    //------------------------------------------------
 
     public void RefreshInventory()
     {
@@ -115,7 +167,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    //=================================================
+    //------------------------------------------------
 
     public void SelectSlot(int index)
     {
@@ -125,7 +177,6 @@ public class InventoryManager : MonoBehaviour
         if (selectedSlot == index)
         {
             Deselect();
-
             return;
         }
 
@@ -134,7 +185,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Selected : " + inventory[index].itemName);
     }
 
-    //=================================================
+    //------------------------------------------------
 
     public void Deselect()
     {
@@ -143,7 +194,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Deselected");
     }
 
-    //=================================================
+    //------------------------------------------------
 
     public ItemData SelectedItem
     {
@@ -156,6 +207,8 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    //------------------------------------------------
+
     public int SelectedItemID
     {
         get
@@ -166,6 +219,8 @@ public class InventoryManager : MonoBehaviour
             return SelectedItem.itemID;
         }
     }
+
+    //------------------------------------------------
 
     public bool HasItem(int id)
     {
