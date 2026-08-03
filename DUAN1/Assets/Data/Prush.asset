@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 7
   itemName: prush
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -71076711, guid: f0df2cbd8211a1749a38d001ceb1d8f3, type: 3}
   consumable: 0

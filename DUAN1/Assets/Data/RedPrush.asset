@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 8
   itemName: redPrush
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -609585143, guid: cb980a299251f7e41922370d17800397, type: 3}
   consumable: 0
