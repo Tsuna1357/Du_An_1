@@ -1613,6 +1613,7 @@ GameObject:
   - component: {fileID: 529381962}
   - component: {fileID: 529381961}
   - component: {fileID: 529381960}
+  - component: {fileID: 529381963}
   m_Layer: 5
   m_Name: LeftButton
   m_TagString: Untagged
@@ -1733,6 +1734,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529381958}
   m_CullTransparentMesh: 1
+--- !u!65 &529381963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529381958}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &548677808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,8 +1883,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.56, y: 2.76, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.56, y: 3.1186562, z: 0.2}
+  m_Center: {x: 0, y: 0.1793282, z: 0}
 --- !u!1 &597030923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,6 +2590,7 @@ GameObject:
   - component: {fileID: 831857021}
   - component: {fileID: 831857020}
   - component: {fileID: 831857019}
+  - component: {fileID: 831857022}
   m_Layer: 5
   m_Name: 'RightButton '
   m_TagString: Untagged
@@ -2688,6 +2711,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831857017}
   m_CullTransparentMesh: 1
+--- !u!65 &831857022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831857017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &879803521
 GameObject:
   m_ObjectHideFlags: 0
@@ -9284,13 +9328,14 @@ GameObject:
   - component: {fileID: 1568625248}
   - component: {fileID: 1568625247}
   - component: {fileID: 1568625246}
+  - component: {fileID: 1568625249}
   m_Layer: 5
   m_Name: LookUpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1568625245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9404,6 +9449,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568625244}
   m_CullTransparentMesh: 1
+--- !u!65 &1568625249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568625244}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1642220676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9809,8 +9875,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3786244, y: 1, z: 1}
-  m_Center: {x: -0.035876513, y: 0, z: 0}
+  m_Size: {x: 1.1039858, y: 0.77537775, z: 1}
+  m_Center: {x: -0.09916091, y: 0.034958363, z: 0}
 --- !u!114 &1792247928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11113,6 +11179,7 @@ GameObject:
   - component: {fileID: 2122613248}
   - component: {fileID: 2122613247}
   - component: {fileID: 2122613246}
+  - component: {fileID: 2122613249}
   m_Layer: 5
   m_Name: 'LookDownButton '
   m_TagString: Untagged
@@ -11305,6 +11372,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122613244}
   m_CullTransparentMesh: 1
+--- !u!65 &2122613249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122613244}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2132038069
 GameObject:
   m_ObjectHideFlags: 0
