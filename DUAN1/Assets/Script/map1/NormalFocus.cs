@@ -16,7 +16,7 @@ public class NormalFocus : Interactable
         }
 
         // Đã focus rồi
-        Debug.Log("Đã focus vào tủ");
+        Debug.Log("Đã focus ");
     }
 
     public void FocusIn()

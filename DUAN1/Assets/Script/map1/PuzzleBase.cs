@@ -11,11 +11,38 @@ public class PuzzleBase : Interactable
     [HideInInspector]
     public int currentState = 0;
 
+    // THÊM: cho phép gọi puzzle từ event khác (hồi sinh quạ)
+    [HideInInspector]
+    public bool forceRun = false;
+
+
     public override void OnClick()
     {
         // Puzzle đã kết thúc
         if (currentState == -1)
             return;
+
+
+        // THÊM: chạy puzzle không cần focus camera
+        if (forceRun)
+        {
+            PuzzleState forceState = GetCurrentState();
+
+            if (forceState != null && forceState.actions != null)
+            {
+                foreach (PuzzleActionData action in forceState.actions)
+                {
+                    if (action == null)
+                        continue;
+
+                    Execute(action);
+                }
+            }
+
+            forceRun = false;
+            return;
+        }
+
 
         // Chưa gán Camera
         if (cameraMap == null)
@@ -33,6 +60,7 @@ public class PuzzleBase : Interactable
         if (state == null)
             return;
 
+
         //----------------------------------------
         // Check Required Item
         //----------------------------------------
@@ -47,6 +75,7 @@ public class PuzzleBase : Interactable
                 InventoryManager.Instance.RemoveSelectedItem();
             }
         }
+
 
         //----------------------------------------
         // Execute Actions
@@ -63,6 +92,7 @@ public class PuzzleBase : Interactable
             }
         }
 
+
         //----------------------------------------
         // Change State
         //----------------------------------------
@@ -72,6 +102,7 @@ public class PuzzleBase : Interactable
             currentState = state.nextState;
         }
     }
+
 
     //--------------------------------------------------------
 
@@ -86,6 +117,7 @@ public class PuzzleBase : Interactable
         return null;
     }
 
+
     //--------------------------------------------------------
 
     void Execute(PuzzleActionData action)
@@ -99,12 +131,14 @@ public class PuzzleBase : Interactable
 
                 break;
 
+
             case PuzzleAction.DeactiveObject:
 
                 if (action.targetObject != null)
                     action.targetObject.SetActive(false);
 
                 break;
+
 
             case PuzzleAction.AnimatorBool:
 
@@ -113,12 +147,14 @@ public class PuzzleBase : Interactable
 
                 break;
 
+
             case PuzzleAction.AnimatorInt:
 
                 if (action.animator != null)
                     action.animator.SetInteger(action.intName, action.intValue);
 
                 break;
+
 
             case PuzzleAction.AddItem:
 
@@ -129,11 +165,13 @@ public class PuzzleBase : Interactable
 
                 break;
 
+
             case PuzzleAction.RemoveItem:
 
                 InventoryManager.Instance.RemoveItemByID(action.removeItemID);
 
                 break;
+
 
             case PuzzleAction.ReplaceItem:
 
@@ -144,17 +182,20 @@ public class PuzzleBase : Interactable
 
                 break;
 
+
             case PuzzleAction.OpenPopup:
 
                 cameraMap.OpenPopup(action.popupUI);
 
                 break;
 
+
             case PuzzleAction.ClosePopup:
 
                 cameraMap.ClosePopup();
 
                 break;
+
 
             case PuzzleAction.Finish:
 

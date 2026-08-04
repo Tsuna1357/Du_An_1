@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c18b512d18e09d0409113d4195a7d653
+guid: 7f38a2615c598a447bad3ea67031d4ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue_brush_0
+      name: Painting_3_0
       rect:
         serializedVersion: 2
-        x: 252
-        y: 258
-        width: 594
-        height: 621
+        x: 319
+        y: 24
+        width: 414
+        height: 782
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 745fa96ca60d6674f918fffd1c044aa7
-      internalID: -1902472453
+      spriteID: 94279cab95f3f434dbd68c85e11f5db0
+      internalID: -704145325
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6e638407b2f343b41abcc0c768f4849b
+    spriteID: b38209edad253af48a18e55c93c0f025
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blue_brush_0: -1902472453
+      Painting_3_0: -704145325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
