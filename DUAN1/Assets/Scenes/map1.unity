@@ -1580,6 +1580,7 @@ MonoBehaviour:
       replaceNewID: 8
       popupUI: {fileID: 0}
   currentState: 0
+  forceRun: 0
 --- !u!65 &482310680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2078,6 +2079,7 @@ MonoBehaviour:
       replaceNewID: 0
       popupUI: {fileID: 0}
   currentState: 0
+  forceRun: 0
 --- !u!65 &628956631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3747,13 +3749,13 @@ MonoBehaviour:
       replaceOldID: 8
       replaceNewID: 7
       popupUI: {fileID: 0}
-    - action: 3
+    - action: 4
       targetObject: {fileID: 1000860713}
       animator: {fileID: 1000860716}
-      boolName: isdone
-      boolValue: 1
-      intName: 
-      intValue: 0
+      boolName: 
+      boolValue: 0
+      intName: Painting_State
+      intValue: 1
       addItemID: 0
       removeItemID: 0
       replaceOldID: 8
@@ -3778,6 +3780,7 @@ MonoBehaviour:
       replaceNewID: 0
       popupUI: {fileID: 0}
   currentState: 0
+  forceRun: 0
 --- !u!65 &1269454872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9934,6 +9937,7 @@ MonoBehaviour:
       replaceNewID: -1
       popupUI: {fileID: 0}
   currentState: 0
+  forceRun: 0
 --- !u!1 &1797127881
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,6 +10269,7 @@ MonoBehaviour:
     nextState: 2
     actions: []
   currentState: 0
+  forceRun: 0
 --- !u!1 &1875549444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10483,6 +10488,7 @@ MonoBehaviour:
       replaceNewID: 0
       popupUI: {fileID: 482310677}
   currentState: 0
+  forceRun: 0
 --- !u!65 &1908269100
 BoxCollider:
   m_ObjectHideFlags: 0
