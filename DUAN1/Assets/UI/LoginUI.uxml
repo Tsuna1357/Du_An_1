@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/LoginUI.uss?fileID=7433441132597879392&amp;guid=101a56d6950857f4498c8ea445b3a49a&amp;type=3#LoginUI"/>
+    <ui:VisualElement name="root" class="root">
+        <ui:VisualElement name="background" class="background"/>
+        <ui:VisualElement name="loginPanel" class="login-panel">
+            <ui:Label text="VANISHING ROOM" class="game-title"/>
+            <ui:Label text="ĐĂNG NHẬP" class="form-title"/>
+            <ui:Label text="EMAIL" class="field-label"/>
+            <ui:TextField name="emailInput" class="input-field"/>
+            <ui:Label text="MẬT KHẨU" class="field-label"/>
+            <ui:TextField name="passwordInput" password="true" class="input-field"/>
+            <ui:Button name="loginButton" text="ĐĂNG NHẬP" class="main-button"/>
+            <ui:Label name="loginMessage" text="" class="message"/>
+            <ui:Button name="registerButton" text="CHƯA CÓ TÀI KHOẢN?  ĐĂNG KÝ" class="link-button"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="registerPanel" class="login-panel register-panel">
+            <ui:Label text="VANISHING ROOM" class="game-title"/>
+            <ui:Label text="TẠO TÀI KHOẢN" class="form-title"/>
+            <ui:Label text="EMAIL" class="field-label"/>
+            <ui:TextField name="registerEmailInput" class="input-field"/>
+            <ui:Label text="MẬT KHẨU" class="field-label"/>
+            <ui:TextField name="registerPasswordInput" password="true" class="input-field"/>
+            <ui:Label text="NHẬP LẠI MẬT KHẨU" class="field-label"/>
+            <ui:TextField name="confirmPasswordInput" password="true" class="input-field"/>
+            <ui:Button name="registerConfirmButton" text="TẠO TÀI KHOẢN" class="main-button"/>
+            <ui:Label name="registerMessage" text="" class="message"/>
+            <ui:Button name="backLoginButton" text="← QUAY LẠI ĐĂNG NHẬP" class="link-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
