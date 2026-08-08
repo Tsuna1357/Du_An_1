@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "758984505111",
+    "project_id": "duan1-d9252",
+    "storage_bucket": "duan1-d9252.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758984505111:android:d5f3ded7fdd9cda3a3e952",
+        "android_client_info": {
+          "package_name": "com.miyuki.vanising_room"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD77t2JsRqhTbIXCjvX3O1bzxsznq7pde0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

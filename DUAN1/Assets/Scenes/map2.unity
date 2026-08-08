@@ -4332,6 +4332,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930183753}
   m_CullTransparentMesh: 1
+--- !u!1 &936371616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936371617}
+  - component: {fileID: 936371619}
+  - component: {fileID: 936371618}
+  m_Layer: 0
+  m_Name: Tay (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &936371617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936371616}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.65, y: 2.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1573011238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936371618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936371616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3653af7a013200041991e16fdeb40954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NormalFocus
+  cameraMap: {fileID: 340412747}
+  focusPoint: {fileID: 1324674135}
+  isFocused: 0
+--- !u!65 &936371619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936371616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6143249, y: 0.47045493, z: 0.7705472}
+  m_Center: {x: 0.029177308, y: -0.20161402, z: 0.114726424}
 --- !u!1 &955892696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,7 +4468,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleBase
   cameraMap: {fileID: 340412747}
-  states: []
+  states:
+  - autoNext: 1
+    stateID: 0
+    requireItemID: 9
+    consumeItem: 0
+    nextState: 1
+    actions:
+    - action: 4
+      targetObject: {fileID: 1487532092}
+      animator: {fileID: 1487532095}
+      boolName: 
+      boolValue: 0
+      intName: Painting_State
+      intValue: 2
+      addItemID: 0
+      removeItemID: 0
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
+    - action: 9
+      targetObject: {fileID: 0}
+      animator: {fileID: 0}
+      boolName: 
+      boolValue: 0
+      intName: 
+      intValue: 0
+      addItemID: 0
+      removeItemID: 0
+      replaceOldID: 9
+      replaceNewID: 7
+      popupUI: {fileID: 0}
+  - autoNext: 1
+    stateID: 1
+    requireItemID: -1
+    consumeItem: 0
+    nextState: 1
+    actions:
+    - action: 1
+      targetObject: {fileID: 1235743332}
+      animator: {fileID: 0}
+      boolName: 
+      boolValue: 0
+      intName: 
+      intValue: 0
+      addItemID: 0
+      removeItemID: 0
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
   currentState: 0
   forceRun: 0
 --- !u!1 &1013919655
@@ -4758,75 +4875,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1411971794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1097401644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1097401645}
-  - component: {fileID: 1097401647}
-  - component: {fileID: 1097401646}
-  m_Layer: 0
-  m_Name: Chan
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1097401645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097401644}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: -5.72, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1411971794}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097401646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097401644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3653af7a013200041991e16fdeb40954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NormalFocus
-  cameraMap: {fileID: 340412747}
-  focusPoint: {fileID: 1096084860}
-  isFocused: 0
---- !u!65 &1097401647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097401644}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.494109, y: 2.696206, z: 0.49657342}
-  m_Center: {x: 0.48452115, y: 0.84810305, z: 0.25171334}
 --- !u!1 &1235743332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,7 +5420,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1013919656}
-  - {fileID: 1097401645}
   - {fileID: 1324674135}
   - {fileID: 1096084860}
   m_Father: {fileID: 0}
@@ -5454,8 +5501,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7044698, y: 0.5966413, z: 0.20000005}
-  m_Center: {x: -2.6757224, y: 2.4985251, z: 9.602599e-15}
+  m_Size: {x: 2.0009084, y: 1.0935307, z: 0.20000005}
+  m_Center: {x: -2.527503, y: 2.7469697, z: 7.4962755e-15}
 --- !u!1 &1470808863
 GameObject:
   m_ObjectHideFlags: 0
@@ -10837,6 +10884,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 876333677}
+  - {fileID: 936371617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1573011239
@@ -12724,30 +12772,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1013919657}
-        m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
-        m_MethodName: ExitFocus
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1097401646}
-        m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
-        m_MethodName: ExitFocus
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 388488390}
         m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
         m_MethodName: ExitFocus
@@ -12785,6 +12809,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1487532093}
+        m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
+        m_MethodName: ExitFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1013919657}
         m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
         m_MethodName: ExitFocus
         m_Mode: 1

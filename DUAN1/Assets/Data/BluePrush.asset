@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BluePrush
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemID: 9
-  itemName: 
+  itemName: blue brush
   description: 
   icon: {fileID: -1902472453, guid: c18b512d18e09d0409113d4195a7d653, type: 3}
   consumable: 0
