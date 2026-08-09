@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void SetMusicVolume(float volume)
