@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34d39017d83868c47ba87b7db40c6dd7, type: 3}
-  m_Name: kim_gio
+  m_Name: bo_hoa
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemID: 10
-  itemName: kimgio
+  itemID: 12
+  itemName: bohoa
   description: 
-  icon: {fileID: -315815144, guid: 9cbfd6ac6361da146b2a4e75eb4568b0, type: 3}
+  icon: {fileID: -1174532879, guid: e580a5845e237c84fbc1433b8bc1ec50, type: 3}
   consumable: 0

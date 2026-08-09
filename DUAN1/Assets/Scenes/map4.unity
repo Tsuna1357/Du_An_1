@@ -1824,7 +1824,7 @@ GameObject:
   - component: {fileID: 340412745}
   - component: {fileID: 340412744}
   - component: {fileID: 340412743}
-  - component: {fileID: 340412742}
+  - component: {fileID: 340412747}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1832,24 +1832,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &340412742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340412741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9260dfa3b0282734b8b297173ed065aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Camera
-  upButton: {fileID: 0}
-  downButton: {fileID: 0}
-  fadePanel: {fileID: 112427176}
-  rotateSpeed: 6
-  fadeTime: 0.4
-  ceilingAngle: -80
 --- !u!114 &340412743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1951,28 @@ Transform:
   - {fileID: 1563756684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &340412747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340412741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65bafc3414260b04d9e7c2798d2339d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMap1
+  leftButton: {fileID: 2070018211}
+  rightButton: {fileID: 691485341}
+  upButton: {fileID: 1632473828}
+  downButton: {fileID: 1034849356}
+  fadePanel: {fileID: 112427176}
+  fadeTime: 0.4
+  rotateSpeed: 8
+  ceilingAngle: -80
+  isFocus: 0
+  currentPopup: {fileID: 0}
 --- !u!1 &354858445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,8 +2847,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 340412742}
-        m_TargetAssemblyTypeName: CameraRotation, Assembly-CSharp
+      - m_Target: {fileID: 340412747}
+        m_TargetAssemblyTypeName: CameraMap1, Assembly-CSharp
         m_MethodName: RotateRight
         m_Mode: 1
         m_Arguments:
@@ -3877,21 +3881,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CameraMap1, Assembly-CSharp
-        m_MethodName: LookDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CameraMap1, Assembly-CSharp
-        m_MethodName: Back
+      - m_Target: {fileID: 1643461110}
+        m_TargetAssemblyTypeName: Cabinet, Assembly-CSharp
+        m_MethodName: ExitCabinet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4102,7 +4094,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047274194}
-  - component: {fileID: 1047274193}
   m_Layer: 0
   m_Name: tugo (1)
   m_TagString: Untagged
@@ -4110,23 +4101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1047274193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1047274192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2219a60f3bea6c849be92e3ed050048d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cabinet
-  cameraMap: {fileID: 0}
-  focusPoint: {fileID: 1743830472}
-  isFocused: 0
-  leftDoorOpen: 0
-  rightDoorOpen: 0
 --- !u!4 &1047274194
 Transform:
   m_ObjectHideFlags: 0
@@ -4217,7 +4191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8eb87afb4a3a54c8155cecca7fe2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  cabinet: {fileID: 1047274193}
+  cabinet: {fileID: 1643461110}
   isLeftDoor: 1
 --- !u!212 &1100802278
 SpriteRenderer:
@@ -10492,19 +10466,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1632473829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CameraMap1, Assembly-CSharp
-        m_MethodName: LookUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1632473829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10554,6 +10516,7 @@ GameObject:
   - component: {fileID: 1643461107}
   - component: {fileID: 1643461109}
   - component: {fileID: 1643461108}
+  - component: {fileID: 1643461110}
   m_Layer: 0
   m_Name: tugo
   m_TagString: Untagged
@@ -10656,6 +10619,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1643461110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643461106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2219a60f3bea6c849be92e3ed050048d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cabinet
+  cameraMap: {fileID: 340412747}
+  focusPoint: {fileID: 1743830472}
+  isFocused: 0
+  leftDoorOpen: 0
+  rightDoorOpen: 0
 --- !u!1 &1656853133
 GameObject:
   m_ObjectHideFlags: 0
@@ -11484,7 +11464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8eb87afb4a3a54c8155cecca7fe2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  cabinet: {fileID: 1047274193}
+  cabinet: {fileID: 1643461110}
   isLeftDoor: 0
 --- !u!65 &2017928240
 BoxCollider:
@@ -11670,8 +11650,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 340412742}
-        m_TargetAssemblyTypeName: CameraRotation, Assembly-CSharp
+      - m_Target: {fileID: 340412747}
+        m_TargetAssemblyTypeName: CameraMap1, Assembly-CSharp
         m_MethodName: RotateLeft
         m_Mode: 1
         m_Arguments:

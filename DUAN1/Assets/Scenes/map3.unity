@@ -1314,6 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416902612}
   - component: {fileID: 416902613}
+  - component: {fileID: 416902614}
   m_Layer: 0
   m_Name: puzzle_box
   m_TagString: Untagged
@@ -1357,6 +1358,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4512322, y: 1.5424075, z: 1.2387701}
   m_Center: {x: -0.2256162, y: 0.27120394, z: -0.1193851}
+--- !u!114 &416902614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416902611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b7cc229eb2890409aae079e55fafaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClockKeyPuzzle
+  kimPhutItemID: 11
+  kimGioItemID: 10
+  kimPhut: {fileID: 1132055079}
+  kimGio: {fileID: 1448422776}
+  khoaTu: {fileID: 859744102}
+  kimGioOn: 0
+  kimPhutOn: 0
 --- !u!1 &470485716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,6 +4961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1401140259}
   - component: {fileID: 1401140260}
+  - component: {fileID: 1401140261}
   m_Layer: 0
   m_Name: bo_hoa_0
   m_TagString: Untagged
@@ -5022,6 +5043,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1401140261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401140258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824c1b8562116c74aa7ab23a86ed5863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DaoPickup
+  cabinet: {fileID: 1602320632}
+  itemData: {fileID: 11400000, guid: 8d29dc4432e43d64c94ed600af43f68c, type: 2}
 --- !u!1 &1448422776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10854,7 +10889,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 16c01e498df92dc46be6b70fbb0929aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10895,14 +10930,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720612598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -14.81, y: -3.37, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1355490007}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1725358764
 GameObject:
   m_ObjectHideFlags: 0
