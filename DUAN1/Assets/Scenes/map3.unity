@@ -1147,15 +1147,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1778275086, guid: a75fa07b5da5074459d65ffcb44916c2, type: 3}
+  m_Sprite: {fileID: 185015353, guid: 438784c34923afe4eadf4700ec5ffae0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.14, y: 1.55}
+  m_Size: {x: 4.15, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &387523486
 Transform:
@@ -1165,12 +1165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387523484}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.99, y: 4.43, z: -3.36}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.026222344, y: 0.88641775, z: 0.008999823}
+  m_LocalScale: {x: 0.13111144, y: 0.15703402, z: 0.13333334}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 750505464}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &400518123
 GameObject:
@@ -2663,7 +2663,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1940743687, guid: 1cb48c298841df942b9bb2a7daac8edc, type: 3}
+  m_Sprite: {fileID: -514339235, guid: 79e2bf6cd26699a47bae602a33d168c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2671,7 +2671,7 @@ SpriteRenderer:
   m_Size: {x: 4.07, y: 6.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &750505464
 Transform:
@@ -2685,7 +2685,8 @@ Transform:
   m_LocalPosition: {x: -15.963, y: 2.1721, z: -3.44}
   m_LocalScale: {x: 3.05084, y: 2.5472188, z: 3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 387523486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &760133459
@@ -5398,6 +5399,7 @@ Transform:
   m_Children:
   - {fileID: 1707695818}
   - {fileID: 1679318266}
+  - {fileID: 1875613902}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1513700558
@@ -10953,14 +10955,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720612598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -14.81, y: -3.37, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 15.34, y: -3.37, z: -2.82}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1355490007}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1725358764
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,15 +11496,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1924961291, guid: f640db1bf3455784cb61d0b2eb03f41a, type: 3}
+  m_Sprite: {fileID: 1527110356, guid: 2b25ff9a4e137cb4394d51e1f9d7c2fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.01, y: 4.29}
+  m_Size: {x: 4.78, y: 4.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &1875613902
 Transform:
@@ -11512,12 +11514,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875613900}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.9396927, w: 0.34202018}
-  m_LocalPosition: {x: -2.411, y: -4.949, z: 15.95}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9396927, w: 0.34202018}
+  m_LocalPosition: {x: -1.321, y: -3.1590004, z: -0.94999886}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1487532097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140}
 --- !u!114 &1875613903
 MonoBehaviour:
@@ -12498,9 +12500,7 @@ SceneRoots:
   - {fileID: 597030925}
   - {fileID: 1679289740}
   - {fileID: 1576564915}
-  - {fileID: 1875613902}
   - {fileID: 750505464}
-  - {fileID: 387523486}
   - {fileID: 1228099955}
   - {fileID: 508661997}
   - {fileID: 1074159909}
