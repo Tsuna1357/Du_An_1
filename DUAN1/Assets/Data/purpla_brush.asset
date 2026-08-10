@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 17
   itemName: purple_brush
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 478086742, guid: fd4e21ca282434046b23d3040da6b406, type: 3}
   consumable: 0

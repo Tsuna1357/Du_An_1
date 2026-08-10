@@ -428,6 +428,113 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &76199375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76199376}
+  - component: {fileID: 76199378}
+  - component: {fileID: 76199377}
+  m_Layer: 0
+  m_Name: BoHoa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76199376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76199375}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0.9949999, y: 0.06500006, z: 0.26499987}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1551367882}
+  m_Father: {fileID: 508661997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76199377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76199375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8f2e1f56d5b7b4182f405219b92780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleBase
+  cameraMap: {fileID: 340412747}
+  states:
+  - autoNext: 1
+    stateID: 0
+    requireItemID: 12
+    consumeItem: 0
+    nextState: 1
+    actions:
+    - action: 1
+      targetObject: {fileID: 1551367879}
+      animator: {fileID: 0}
+      boolName: 
+      boolValue: 0
+      intName: 
+      intValue: 0
+      addItemID: 0
+      removeItemID: 0
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
+    - action: 8
+      targetObject: {fileID: 1551367879}
+      animator: {fileID: 0}
+      boolName: 
+      boolValue: 0
+      intName: 
+      intValue: 0
+      addItemID: 0
+      removeItemID: 12
+      replaceOldID: 0
+      replaceNewID: 0
+      popupUI: {fileID: 0}
+  - autoNext: 1
+    stateID: 1
+    requireItemID: -1
+    consumeItem: 0
+    nextState: 1
+    actions: []
+  currentState: 0
+  forceRun: 0
+--- !u!65 &76199378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76199375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.5806866, y: 4.08801, z: 1}
+  m_Center: {x: 0.06619036, y: 0.34356225, z: 0}
 --- !u!1 &86120948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,8 +2237,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 253403695}
-  - {fileID: 1551367882}
   - {fileID: 1663304121}
+  - {fileID: 76199376}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &508661998
@@ -6304,7 +6411,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1551367882}
   - component: {fileID: 1551367881}
-  - component: {fileID: 1551367880}
   m_Layer: 0
   m_Name: "b\xF3 hoa_0"
   m_TagString: Untagged
@@ -6312,27 +6418,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!65 &1551367880
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551367879}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.6300006, y: 4.7400002, z: 1.7241329}
-  m_Center: {x: 0, y: 0, z: 0.76206553}
 --- !u!212 &1551367881
 SpriteRenderer:
   serializedVersion: 2
@@ -6380,7 +6465,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1174532879, guid: e580a5845e237c84fbc1433b8bc1ec50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6400,12 +6485,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551367879}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0.9949999, y: 0.06500006, z: 0.26499987}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 508661997}
+  m_Father: {fileID: 76199376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!1 &1563756683
 GameObject:
@@ -13869,6 +13954,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1138798252}
+        m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
+        m_MethodName: ExitFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508661998}
         m_TargetAssemblyTypeName: NormalFocus, Assembly-CSharp
         m_MethodName: ExitFocus
         m_Mode: 1
