@@ -4847,8 +4847,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355490006}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.01290342, y: 0.99372935, z: -0.10816666, w: -0.025207397}
-  m_LocalPosition: {x: 0.24546154, y: 1.0971165, z: 4.603973}
+  m_LocalRotation: {x: -0.06912333, y: 0.020820374, z: 0.003406468, w: -0.997385}
+  m_LocalPosition: {x: 0.27339983, y: 1.1417255, z: -3.8772888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4962,6 +4962,7 @@ GameObject:
   - component: {fileID: 1401140259}
   - component: {fileID: 1401140260}
   - component: {fileID: 1401140261}
+  - component: {fileID: 1401140262}
   m_Layer: 0
   m_Name: bo_hoa_0
   m_TagString: Untagged
@@ -5056,7 +5057,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DaoPickup
   cabinet: {fileID: 1602320632}
+  isLeftDoor: 0
   itemData: {fileID: 11400000, guid: 8d29dc4432e43d64c94ed600af43f68c, type: 2}
+--- !u!65 &1401140262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401140258}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.3525896, y: 5.4698443, z: 1.2315725}
+  m_Center: {x: 0.3109924, y: -0.65031976, z: -0.51579416}
 --- !u!1 &1448422776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10801,8 +10824,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707695817}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.100029156, y: 0.02163227, z: -0.0016844374, w: -0.99474794}
-  m_LocalPosition: {x: 0.14226925, y: 2.6511502, z: -9.141954}
+  m_LocalRotation: {x: -0.073543295, y: 0.0051944028, z: 0.0036567035, w: -0.9972718}
+  m_LocalPosition: {x: 0.1530667, y: 1.388777, z: -8.034915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12355,7 +12378,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1602320632}
         m_TargetAssemblyTypeName: Cabinet, Assembly-CSharp
         m_MethodName: ExitCabinet
         m_Mode: 1
