@@ -15,5 +15,5 @@ MonoBehaviour:
   itemID: 15
   itemName: picture map 3 1-0
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -706301460, guid: 7718af155fa3e4349b369a3445cd580d, type: 3}
   consumable: 0
