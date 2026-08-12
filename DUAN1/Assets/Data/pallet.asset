@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pallet
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemID: 1717
-  itemName: pannet
+  itemName: pallet
   description: 
   icon: {fileID: -416985645, guid: 207603d1c367b5444a0fba17f3d35806, type: 3}
   consumable: 0
