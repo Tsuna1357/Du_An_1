@@ -8,6 +8,23 @@ public class Door : Interactable
     [Header("Door")]
     public bool isLeftDoor;
 
+    // THÊM: cho phép SafeCodeUI gọi mở cửa
+    public void OpenByPuzzle()
+    {
+        if (rotating)
+            return;
+
+        bool isOpen = isLeftDoor
+            ? cabinet.leftDoorOpen
+            : cabinet.rightDoorOpen;
+
+        // Chỉ mở nếu cửa đang đóng
+        if (!isOpen)
+        {
+            StartCoroutine(RotateDoor());
+        }
+    }
+
     private bool rotating;
 
     private Quaternion closeRotation;

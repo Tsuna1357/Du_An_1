@@ -10596,6 +10596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DaoPickup
   cabinet: {fileID: 2025793787}
+  isLeftDoor: 1
   itemData: {fileID: 11400000, guid: df3e5fd6911667c438abeea985868eb1, type: 2}
 --- !u!1 &1668729156
 GameObject:
@@ -11728,6 +11729,74 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2076533544}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959485420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959485422}
+  - component: {fileID: 1959485421}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1959485421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959485420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775b8e40907c680479c8545cbf2f4b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Map1Tutorial
+  cameraMap: {fileID: 340412747}
+  inventoryUI: {fileID: 1332094198}
+  gameUI: []
+  leftButton: {fileID: 529381960}
+  rightButton: {fileID: 831857019}
+  upButton: {fileID: 1568625246}
+  downButton: {fileID: 2122613246}
+  cloth: {fileID: 0}
+  clothEndPoint: {fileID: 0}
+  clothMoveTime: 0.5
+  clothArrow: {fileID: 0}
+  clothClickArea: {fileID: 0}
+  clothText: {fileID: 0}
+  turnLeftArrow: {fileID: 0}
+  turnRightArrow: {fileID: 0}
+  turnText: {fileID: 0}
+  paintingArrow: {fileID: 0}
+  paintingClickArea: {fileID: 0}
+  paintingText: {fileID: 0}
+  storyText: {fileID: 0}
+  scissorsArrow: {fileID: 0}
+  scissorsClickArea: {fileID: 0}
+  scissorsText: {fileID: 0}
+  scissorsItem: {fileID: 0}
+--- !u!4 &1959485422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959485420}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.30579, y: -3.81036, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993410175
@@ -12890,3 +12959,4 @@ SceneRoots:
   - {fileID: 369734746}
   - {fileID: 628956633}
   - {fileID: 2143908986}
+  - {fileID: 1959485422}
