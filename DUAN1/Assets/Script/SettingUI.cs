@@ -3,27 +3,44 @@ using UnityEngine.UI;
 
 public class SettingUI : MonoBehaviour
 {
+    [Header("Setting UI")]
     public GameObject settingPanel;
     public Slider musicSlider;
 
     private void Start()
     {
+        // Đảm bảo Setting đóng khi bắt đầu
+        settingPanel.SetActive(false);
+
+        // Lấy volume đã lưu
         if (AudioManager.Instance != null)
         {
-            musicSlider.value = AudioManager.Instance.GetMusicVolume();
+            float savedVolume = AudioManager.Instance.GetMusicVolume();
+
+            // Gán giá trị cho Slider
+            musicSlider.SetValueWithoutNotify(savedVolume);
+
+            // Đảm bảo AudioSource cũng đúng volume
+            AudioManager.Instance.SetMusicVolume(savedVolume);
         }
 
+        // Đăng ký sự kiện Slider
         musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
-
-        // Mặc định đóng Setting
-        settingPanel.SetActive(false);
     }
 
     public void OpenSetting()
     {
         settingPanel.SetActive(true);
 
-        // Dừng thời gian game
+        // Cập nhật Slider đúng với volume hiện tại
+        if (AudioManager.Instance != null)
+        {
+            float currentVolume = AudioManager.Instance.GetMusicVolume();
+
+            musicSlider.SetValueWithoutNotify(currentVolume);
+        }
+
+        // Dừng game
         Time.timeScale = 0f;
     }
 
@@ -31,7 +48,7 @@ public class SettingUI : MonoBehaviour
     {
         settingPanel.SetActive(false);
 
-        // Chạy lại thời gian game
+        // Chạy lại game
         Time.timeScale = 1f;
     }
 
@@ -45,7 +62,13 @@ public class SettingUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Tránh game bị kẹt timeScale = 0
+        // Đảm bảo game không bị kẹt khi SettingUI bị destroy
         Time.timeScale = 1f;
+
+        // Hủy listener
+        if (musicSlider != null)
+        {
+            musicSlider.onValueChanged.RemoveListener(ChangeMusicVolume);
+        }
     }
 }
