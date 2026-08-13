@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -162,6 +175,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "\u0111\xE8n c\u1EA7y + n\u1EBFn_3"
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 754
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55012c96836a1c4a921ac94dbe89257
+      internalID: -319927365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -181,6 +216,7 @@ TextureImporter:
       "\u0111\xE8n c\u1EA7y + n\u1EBFn_0": -404251306
       "\u0111\xE8n c\u1EA7y + n\u1EBFn_1": 12914377
       "\u0111\xE8n c\u1EA7y + n\u1EBFn_2": 441182084
+      "\u0111\xE8n c\u1EA7y + n\u1EBFn_3": -319927365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

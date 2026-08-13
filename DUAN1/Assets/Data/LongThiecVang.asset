@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34d39017d83868c47ba87b7db40c6dd7, type: 3}
-  m_Name: Giay
+  m_Name: LongThiecVang
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemID: 1111
-  itemName: 
+  itemID: 20
+  itemName: LongThiecVang
   description: 
-  icon: {fileID: 7482667652216324306, guid: 6652173cf754330449a1b2a199ff0b5b, type: 3}
+  icon: {fileID: 472370939, guid: f180a81d3ba852942ab786d847a6cbef, type: 3}
   consumable: 0

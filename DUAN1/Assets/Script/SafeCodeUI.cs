@@ -5,6 +5,7 @@ public class SafeCodeUI : MonoBehaviour
 {
     [Header("UI")]
     public TMP_Text passwordDisplay;
+    public GameObject passwordPanel;
 
     [Header("Password")]
     public string correctCode = "170463";
@@ -37,10 +38,6 @@ public class SafeCodeUI : MonoBehaviour
         {
             passwordDisplay.text = currentCode;
         }
-        else
-        {
-            Debug.LogError("CHƯA GÁN PASSWORD DISPLAY!");
-        }
 
         CheckCode();
     }
@@ -50,23 +47,28 @@ public class SafeCodeUI : MonoBehaviour
         if (currentCode.Length < 6)
             return;
 
-        // MẬT MÃ ĐÚNG
         if (currentCode == correctCode)
         {
             Debug.Log("MẬT MÃ ĐÚNG!");
 
-            // Ẩn object được kéo từ Hierarchy
+            // Ẩn object cần mở/biến mất
             if (objectToHide != null)
             {
                 objectToHide.SetActive(false);
             }
+
+            // TẮT TOÀN BỘ UI NHẬP MẬT KHẨU
+            if (passwordPanel != null)
+            {
+                passwordPanel.SetActive(false);
+            }
             else
             {
-                Debug.LogWarning("CHƯA GÁN OBJECT TO HIDE!");
+                Debug.LogWarning("CHƯA GÁN PASSWORD PANEL!");
             }
 
-            // Đóng UI
-            gameObject.SetActive(false);
+            // Xóa mã đã nhập
+            currentCode = "";
         }
         else
         {
