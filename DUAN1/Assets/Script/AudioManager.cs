@@ -18,8 +18,6 @@ public class AudioManager : MonoBehaviour
 
         Instance = this;
 
-        // Giữ AudioManager khi chuyển Scene
-        DontDestroyOnLoad(gameObject);
 
         // Lấy volume đã lưu
         float savedVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
