@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 005e379bcc2993946835545100009620
+guid: 601b862990e44f643a6faed769caf4b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: btn_0
+      name: Khan_chum_tranh_0
       rect:
         serializedVersion: 2
-        x: 429
-        y: 697
-        width: 166
-        height: 141
+        x: 135
+        y: 140
+        width: 268
+        height: 314
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,140 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a63c1f521bb1bb6479eaf8be1b778ed2
-      internalID: -1211520367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_1
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 427
-        width: 144
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ad8b6a8e65a94b44aa337dbe5685dee
-      internalID: 1134771200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_2
-      rect:
-        serializedVersion: 2
-        x: 733
-        y: 427
-        width: 144
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91af15a174553364992e7178918c56fa
-      internalID: 1317379262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_3
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 186
-        width: 166
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90e085e9dee5c924cba40f4dc7c34977
-      internalID: -1208111928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_4
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 67
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d4236e83f9cf16448400d4ffee22120
-      internalID: 1134102243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_5
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 132
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b576cab54abb884ab177b8b7b33f4c8
-      internalID: 300145116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: btn_6
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 180
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4af61765389edef419ea59e3ce908dea
-      internalID: -462935202
+      spriteID: 9ef0f96272841214f99ca204d135c01a
+      internalID: -1327661108
       vertices: []
       indices: 
       edges: []
@@ -267,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c2611a743e23f4b4a8467ab20e5a3cfa
+    spriteID: 882e3cfd71efe2e459b3b43f40e58971
     internalID: 0
     vertices: []
     indices: 
@@ -279,13 +147,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      btn_0: -1211520367
-      btn_1: 1134771200
-      btn_2: 1317379262
-      btn_3: -1208111928
-      btn_4: 1134102243
-      btn_5: 300145116
-      btn_6: -462935202
+      Khan_chum_tranh_0: -1327661108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

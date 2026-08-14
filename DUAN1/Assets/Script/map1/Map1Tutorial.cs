@@ -8,19 +8,19 @@ public class Map1Tutorial : MonoBehaviour
     [Header("Camera")]
     public CameraMap1 cameraMap;
 
-    //====================================================
-    // UI GAME
-    //====================================================
+    //==================================================
+    // GAME UI
+    //==================================================
 
-    [Header("Game UI")]
+    [Header("Inventory UI")]
     public GameObject inventoryUI;
 
-    [Tooltip("Toàn bộ UI game sẽ bị tắt khi tutorial bắt đầu")]
+    [Header("Other Game UI")]
     public GameObject[] gameUI;
 
-    //====================================================
+    //==================================================
     // CAMERA BUTTONS
-    //====================================================
+    //==================================================
 
     [Header("Camera Buttons")]
     public Button leftButton;
@@ -28,64 +28,70 @@ public class Map1Tutorial : MonoBehaviour
     public Button upButton;
     public Button downButton;
 
-    //====================================================
-    // CLOTH TUTORIAL
-    //====================================================
+    //==================================================
+    // CLOTH
+    //==================================================
 
     [Header("Cloth")]
     public GameObject cloth;
 
+    [Tooltip("Empty Object là vị trí cuối của khăn")]
     public Transform clothEndPoint;
 
     public float clothMoveTime = 0.5f;
 
     [Header("Cloth Tutorial UI")]
     public GameObject clothArrow;
-    public GameObject clothClickArea;
+    public GameObject clothClickFrame;
     public TMP_Text clothText;
 
-    //====================================================
-    // ROTATION TUTORIAL
-    //====================================================
+    //==================================================
+    // TURN
+    //==================================================
 
-    [Header("Turn Tutorial")]
-    public GameObject turnLeftArrow;
-    public GameObject turnRightArrow;
-
+    [Header("Turn Tutorial UI")]
+    public GameObject leftArrow;
+    public GameObject rightArrow;
     public TMP_Text turnText;
 
-    //====================================================
-    // PAINTING TUTORIAL
-    //====================================================
+    //==================================================
+    // PAINTING
+    //==================================================
 
-    [Header("Painting Tutorial")]
+    [Header("Painting Tutorial UI")]
     public GameObject paintingArrow;
-    public GameObject paintingClickArea;
+    public GameObject paintingClickFrame;
     public TMP_Text paintingText;
 
-    //====================================================
+    //==================================================
     // STORY
-    //====================================================
+    //==================================================
 
     [Header("Story")]
+    [TextArea]
+    public string storyMessage;
+
     public TMP_Text storyText;
 
-    //====================================================
-    // SCISSORS TUTORIAL
-    //====================================================
+    //==================================================
+    // SCISSORS
+    //==================================================
 
     [Header("Scissors")]
-    public GameObject scissorsArrow;
-    public GameObject scissorsClickArea;
-    public TMP_Text scissorsText;
-
     public ItemData scissorsItem;
 
-    //====================================================
-    // STATE
-    //====================================================
+    public GameObject scissorsObject;
 
-    private enum TutorialState
+    [Header("Scissors Tutorial UI")]
+    public GameObject scissorsArrow;
+    public GameObject scissorsClickFrame;
+    public TMP_Text scissorsText;
+
+    //==================================================
+    // STATE
+    //==================================================
+
+    public enum TutorialState
     {
         Cloth,
         Turn,
@@ -96,14 +102,14 @@ public class Map1Tutorial : MonoBehaviour
         Complete
     }
 
-    private TutorialState currentState;
+    [HideInInspector]
+    public TutorialState currentState;
 
     private bool turnedLeft;
-    private bool turnedRight;
 
-    //====================================================
+    //==================================================
     // START
-    //====================================================
+    //==================================================
 
     void Start()
     {
@@ -114,30 +120,34 @@ public class Map1Tutorial : MonoBehaviour
     {
         currentState = TutorialState.Cloth;
 
-        // Tắt inventory
+        // Tắt Inventory
         if (inventoryUI != null)
+        {
             inventoryUI.SetActive(false);
+        }
 
-        // Tắt UI game
+        // Tắt UI game khác
         foreach (GameObject ui in gameUI)
         {
             if (ui != null)
+            {
                 ui.SetActive(false);
+            }
         }
 
-        // Tắt toàn bộ nút camera
+        // Tắt nút camera
         SetCameraButtons(false, false, false, false);
 
-        // Ẩn toàn bộ tutorial UI trước
+        // Tắt toàn bộ tutorial UI
         HideAllTutorialUI();
 
         // Hiện tutorial khăn
         ShowClothTutorial();
     }
 
-    //====================================================
-    // CAMERA BUTTON CONTROL
-    //====================================================
+    //==================================================
+    // CAMERA BUTTON
+    //==================================================
 
     void SetCameraButtons(
         bool left,
@@ -158,63 +168,39 @@ public class Map1Tutorial : MonoBehaviour
             downButton.gameObject.SetActive(down);
     }
 
-    //====================================================
+    //==================================================
     // HIDE ALL TUTORIAL UI
-    //====================================================
+    //==================================================
 
     void HideAllTutorialUI()
     {
-        if (clothArrow != null)
-            clothArrow.SetActive(false);
+        SetActive(clothArrow, false);
+        SetActive(clothClickFrame, false);
+        SetActiveText(clothText, false);
 
-        if (clothClickArea != null)
-            clothClickArea.SetActive(false);
+        SetActive(leftArrow, false);
+        SetActive(rightArrow, false);
+        SetActiveText(turnText, false);
 
-        if (clothText != null)
-            clothText.gameObject.SetActive(false);
+        SetActive(paintingArrow, false);
+        SetActive(paintingClickFrame, false);
+        SetActiveText(paintingText, false);
 
-        if (turnLeftArrow != null)
-            turnLeftArrow.SetActive(false);
+        SetActiveText(storyText, false);
 
-        if (turnRightArrow != null)
-            turnRightArrow.SetActive(false);
-
-        if (turnText != null)
-            turnText.gameObject.SetActive(false);
-
-        if (paintingArrow != null)
-            paintingArrow.SetActive(false);
-
-        if (paintingClickArea != null)
-            paintingClickArea.SetActive(false);
-
-        if (paintingText != null)
-            paintingText.gameObject.SetActive(false);
-
-        if (storyText != null)
-            storyText.gameObject.SetActive(false);
-
-        if (scissorsArrow != null)
-            scissorsArrow.SetActive(false);
-
-        if (scissorsClickArea != null)
-            scissorsClickArea.SetActive(false);
-
-        if (scissorsText != null)
-            scissorsText.gameObject.SetActive(false);
+        SetActive(scissorsArrow, false);
+        SetActive(scissorsClickFrame, false);
+        SetActiveText(scissorsText, false);
     }
 
-    //====================================================
+    //==================================================
     // STEP 1 - CLOTH
-    //====================================================
+    //==================================================
 
     void ShowClothTutorial()
     {
-        if (clothArrow != null)
-            clothArrow.SetActive(true);
-
-        if (clothClickArea != null)
-            clothClickArea.SetActive(true);
+        SetActive(clothArrow, true);
+        SetActive(clothClickFrame, true);
 
         if (clothText != null)
         {
@@ -228,83 +214,67 @@ public class Map1Tutorial : MonoBehaviour
         if (currentState != TutorialState.Cloth)
             return;
 
-        StartCoroutine(RemoveCloth());
+        StartCoroutine(RemoveClothRoutine());
     }
 
-    IEnumerator RemoveCloth()
+    IEnumerator RemoveClothRoutine()
     {
-        HideClothTutorial();
+        // Tắt UI hướng dẫn khăn
+        SetActive(clothArrow, false);
+        SetActive(clothClickFrame, false);
+        SetActiveText(clothText, false);
 
-        if (cloth == null)
-            yield break;
-
-        Vector3 startPosition = cloth.transform.position;
-        Vector3 endPosition;
-
-        if (clothEndPoint != null)
-            endPosition = clothEndPoint.position;
-        else
-            endPosition = startPosition + Vector3.up * 3f;
-
-        float time = 0;
-
-        while (time < clothMoveTime)
+        if (cloth != null)
         {
-            time += Time.deltaTime;
+            Vector3 startPosition = cloth.transform.position;
 
-            cloth.transform.position =
-                Vector3.Lerp(
+            Vector3 endPosition;
+
+            if (clothEndPoint != null)
+                endPosition = clothEndPoint.position;
+            else
+                endPosition = startPosition + Vector3.up * 3f;
+
+            float time = 0f;
+
+            while (time < clothMoveTime)
+            {
+                time += Time.deltaTime;
+
+                cloth.transform.position = Vector3.Lerp(
                     startPosition,
                     endPosition,
                     time / clothMoveTime
                 );
 
-            yield return null;
-        }
+                yield return null;
+            }
 
-        cloth.SetActive(false);
+            cloth.SetActive(false);
+        }
 
         currentState = TutorialState.Turn;
 
         ShowTurnTutorial();
     }
 
-    void HideClothTutorial()
-    {
-        if (clothArrow != null)
-            clothArrow.SetActive(false);
-
-        if (clothClickArea != null)
-            clothClickArea.SetActive(false);
-
-        if (clothText != null)
-            clothText.gameObject.SetActive(false);
-    }
-
-    //====================================================
+    //==================================================
     // STEP 2 - TURN
-    //====================================================
+    //==================================================
 
     void ShowTurnTutorial()
     {
         SetCameraButtons(true, true, false, false);
+
+        SetActive(leftArrow, true);
+        SetActive(rightArrow, true);
 
         if (turnText != null)
         {
             turnText.text = "TURN AROUND";
             turnText.gameObject.SetActive(true);
         }
-
-        if (turnLeftArrow != null)
-            turnLeftArrow.SetActive(true);
-
-        if (turnRightArrow != null)
-            turnRightArrow.SetActive(true);
     }
-
-    //====================================================
-    // PLAYER TURN LEFT
-    //====================================================
 
     public void TurnLeft()
     {
@@ -315,11 +285,11 @@ public class Map1Tutorial : MonoBehaviour
 
         currentState = TutorialState.TurnBack;
 
-        if (turnLeftArrow != null)
-            turnLeftArrow.SetActive(false);
+        // Tắt hướng dẫn trái
+        SetActive(leftArrow, false);
 
-        if (turnRightArrow != null)
-            turnRightArrow.SetActive(true);
+        // Hiện hướng dẫn phải
+        SetActive(rightArrow, true);
 
         if (turnText != null)
             turnText.text = "TURN BACK";
@@ -328,24 +298,20 @@ public class Map1Tutorial : MonoBehaviour
         SetCameraButtons(false, true, false, false);
     }
 
-    //====================================================
-    // PLAYER TURN RIGHT
-    //====================================================
-
     public void TurnRight()
     {
         if (currentState != TutorialState.Turn)
             return;
 
-        turnedRight = true;
+        turnedLeft = false;
 
         currentState = TutorialState.TurnBack;
 
-        if (turnRightArrow != null)
-            turnRightArrow.SetActive(false);
+        // Tắt hướng dẫn phải
+        SetActive(rightArrow, false);
 
-        if (turnLeftArrow != null)
-            turnLeftArrow.SetActive(true);
+        // Hiện hướng dẫn trái
+        SetActive(leftArrow, true);
 
         if (turnText != null)
             turnText.text = "TURN BACK";
@@ -354,42 +320,31 @@ public class Map1Tutorial : MonoBehaviour
         SetCameraButtons(true, false, false, false);
     }
 
-    //====================================================
-    // PLAYER TURN BACK
-    //====================================================
-
     public void TurnBack()
     {
         if (currentState != TutorialState.TurnBack)
             return;
 
-        if (turnLeftArrow != null)
-            turnLeftArrow.SetActive(false);
+        SetActive(leftArrow, false);
+        SetActive(rightArrow, false);
+        SetActiveText(turnText, false);
 
-        if (turnRightArrow != null)
-            turnRightArrow.SetActive(false);
-
-        if (turnText != null)
-            turnText.gameObject.SetActive(false);
+        // Tắt camera button
+        SetCameraButtons(false, false, false, false);
 
         currentState = TutorialState.Painting;
-
-        SetCameraButtons(false, false, false, false);
 
         ShowPaintingTutorial();
     }
 
-    //====================================================
+    //==================================================
     // STEP 3 - PAINTING
-    //====================================================
+    //==================================================
 
     void ShowPaintingTutorial()
     {
-        if (paintingArrow != null)
-            paintingArrow.SetActive(true);
-
-        if (paintingClickArea != null)
-            paintingClickArea.SetActive(true);
+        SetActive(paintingArrow, true);
+        SetActive(paintingClickFrame, true);
 
         if (paintingText != null)
         {
@@ -398,63 +353,55 @@ public class Map1Tutorial : MonoBehaviour
         }
     }
 
-    public void ClickPainting(Transform focusPoint)
+    // Hàm được FocusPainting gọi
+    public void PaintingFocused()
     {
         if (currentState != TutorialState.Painting)
             return;
 
-        if (paintingArrow != null)
-            paintingArrow.SetActive(false);
-
-        if (paintingClickArea != null)
-            paintingClickArea.SetActive(false);
-
-        if (paintingText != null)
-            paintingText.gameObject.SetActive(false);
-
-        // Focus vào tranh
-        cameraMap.Focus(focusPoint);
+        // Tắt hướng dẫn tranh
+        SetActive(paintingArrow, false);
+        SetActive(paintingClickFrame, false);
+        SetActiveText(paintingText, false);
 
         currentState = TutorialState.Story;
 
         ShowStory();
     }
 
-    //====================================================
+    //==================================================
     // STEP 4 - STORY
-    //====================================================
+    //==================================================
 
     void ShowStory()
     {
-        if (storyText != null)
-            storyText.gameObject.SetActive(true);
+        if (storyText == null)
+            return;
+
+        storyText.text = storyMessage;
+        storyText.gameObject.SetActive(true);
     }
 
-    // Hàm này gọi bằng Button / click để tắt story
     public void CloseStory()
     {
         if (currentState != TutorialState.Story)
             return;
 
-        if (storyText != null)
-            storyText.gameObject.SetActive(false);
+        SetActiveText(storyText, false);
 
         currentState = TutorialState.Scissors;
 
         ShowScissorsTutorial();
     }
 
-    //====================================================
+    //==================================================
     // STEP 5 - SCISSORS
-    //====================================================
+    //==================================================
 
     void ShowScissorsTutorial()
     {
-        if (scissorsArrow != null)
-            scissorsArrow.SetActive(true);
-
-        if (scissorsClickArea != null)
-            scissorsClickArea.SetActive(true);
+        SetActive(scissorsArrow, true);
+        SetActive(scissorsClickFrame, true);
 
         if (scissorsText != null)
         {
@@ -471,32 +418,34 @@ public class Map1Tutorial : MonoBehaviour
         if (InventoryManager.Instance == null)
             return;
 
-        // Nhặt kéo
-        if (!InventoryManager.Instance.AddItem(scissorsItem))
+        if (scissorsItem == null)
             return;
 
-        // Tắt tutorial kéo
-        if (scissorsArrow != null)
-            scissorsArrow.SetActive(false);
+        // Add item vào Inventory
+        bool success =
+            InventoryManager.Instance.AddItem(scissorsItem);
 
-        if (scissorsClickArea != null)
-            scissorsClickArea.SetActive(false);
+        if (!success)
+            return;
 
-        if (scissorsText != null)
-            scissorsText.gameObject.SetActive(false);
+        // Xóa kéo trên map
+        SetActive(scissorsObject, false);
 
-        // Hiện inventory
-        if (inventoryUI != null)
-            inventoryUI.SetActive(true);
+        // Tắt UI hướng dẫn
+        SetActive(scissorsArrow, false);
+        SetActive(scissorsClickFrame, false);
+        SetActiveText(scissorsText, false);
 
-        // Hiện nút xuống để Back khỏi Focus
+        // Hiện Inventory
+        SetActive(inventoryUI, true);
+
+        // Hiện nút Back
         SetCameraButtons(false, false, false, true);
 
-        // Active lại toàn bộ UI game
+        // Active lại UI game
         foreach (GameObject ui in gameUI)
         {
-            if (ui != null)
-                ui.SetActive(true);
+            SetActive(ui, true);
         }
 
         currentState = TutorialState.Complete;
@@ -504,15 +453,31 @@ public class Map1Tutorial : MonoBehaviour
         CompleteTutorial();
     }
 
-    //====================================================
+    //==================================================
     // COMPLETE
-    //====================================================
+    //==================================================
 
     void CompleteTutorial()
     {
-        Debug.Log("Map 1 Tutorial Complete");
+        Debug.Log("Tutorial Complete");
 
-        // Tắt toàn bộ GameObject chứa tutorial
+        // Script tự dừng hoàn toàn
         gameObject.SetActive(false);
+    }
+
+    //==================================================
+    // HELPER
+    //==================================================
+
+    void SetActive(GameObject obj, bool value)
+    {
+        if (obj != null)
+            obj.SetActive(value);
+    }
+
+    void SetActiveText(TMP_Text text, bool value)
+    {
+        if (text != null)
+            text.gameObject.SetActive(value);
     }
 }
