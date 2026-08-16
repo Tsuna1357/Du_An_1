@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f78b22dadbe80a4ba517b0901d14085
+guid: dec4e9faae47cca48a05e77163308155
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT_Image_15_56_50_16_thg_8__2026-removebg-preview_0
+      name: anhXe_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 14
-        width: 329
-        height: 487
+        x: 24
+        y: 129
+        width: 773
+        height: 1186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdd5652d80b924947a973ebdca877c6b
-      internalID: -1181996172
+      spriteID: 7dfec5f63448f704b9c0aa95463cea10
+      internalID: -1866401133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT_Image_15_56_50_16_thg_8__2026-removebg-preview_1
+      name: anhXe_1
       rect:
         serializedVersion: 2
-        x: 359
-        y: 92
-        width: 121
-        height: 238
+        x: 1308
+        y: 814
+        width: 372
+        height: 469
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fac818fca562b764d932d1c239639b54
-      internalID: -1119056885
+      spriteID: 30294319a8d80ed4f947a99bdce28c52
+      internalID: -1751944301
       vertices: []
       indices: 
       edges: []
@@ -157,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b5e5ad43d6fd96845bc1253c166ab087
+    spriteID: f155526edd290a94490e178b2c46151a
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ChatGPT_Image_15_56_50_16_thg_8__2026-removebg-preview_0: -1181996172
-      ChatGPT_Image_15_56_50_16_thg_8__2026-removebg-preview_1: -1119056885
+      anhXe_0: -1866401133
+      anhXe_1: -1751944301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

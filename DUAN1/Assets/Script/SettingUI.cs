@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingUI : MonoBehaviour
 {
     [Header("Setting UI")]
     public GameObject settingPanel;
     public Slider musicSlider;
+
+    [Header("Main Menu")]
+    public string mainMenuSceneName = "MainMenu";
 
     private void Start()
     {
@@ -58,6 +62,15 @@ public class SettingUI : MonoBehaviour
         {
             AudioManager.Instance.SetMusicVolume(value);
         }
+    }
+
+    public void BackToMainMenu()
+    {
+        // Trả game về tốc độ bình thường
+        Time.timeScale = 1f;
+
+        // Chuyển về Main Menu
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 
     private void OnDestroy()
