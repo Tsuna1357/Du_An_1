@@ -787,6 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingUI
   settingPanel: {fileID: 585197691}
   musicSlider: {fileID: 439038671}
+  mainMenuSceneName: MainMenu
 --- !u!1 &670622798
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,7 +6881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1957368996
 Transform:
   m_ObjectHideFlags: 0
