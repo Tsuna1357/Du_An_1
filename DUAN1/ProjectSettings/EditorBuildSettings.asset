@@ -6,24 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Script/Scenes/MainMenu.unity
     guid: 2d34e1b2191612844be4245b3fe3bd02
   - enabled: 1
-    path: Assets/Scenes/map1.unity
+    path: Assets/Script/Scenes/map1.unity
     guid: 12a08f04ce8d11744a29d9e481d0c7a7
   - enabled: 1
-    path: Assets/Scenes/map2.unity
+    path: Assets/Script/Scenes/map2.unity
     guid: 3f7986f2523030643aa7f34a2d4184c7
   - enabled: 1
-    path: Assets/Scenes/map3.unity
-    guid: 6036b166ca27ab94490269c50c09cfcf
+    path: Assets/Script/Scenes/map3.unity
+    guid: 3c958b07753714141b30ac2089b07acd
   - enabled: 1
-    path: Assets/Scenes/map4.unity
+    path: Assets/Script/Scenes/map4.unity
     guid: 3a14511c95aa53047940a4d3ca978c67
   - enabled: 1
-    path: Assets/Scenes/map5.unity
+    path: Assets/Script/Scenes/map5.unity
     guid: 7e045bd00fd143f4cb591b00d0f702ac
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e91725be95ff42e4db32059325ed2a8a, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ee020bbbf7696604ca3e6b8670a8c669, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9f9633b19a6c7b543b8f0ecc335aa8f1, type: 2}
